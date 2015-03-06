@@ -110,6 +110,25 @@
                             <li>Aktuelle Version 0.12.0 (06.Feb.2015)</li>
                         </ul>
                     </section>
+                    <section>
+                        <h2>node.js - Beispiel</h2>
+                        <p>
+                            Einfache HTTP-Schnittstelle (Port 8888)
+                        </p>
+                        <pre><code data-trim contenteditable>
+// native dep
+var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {
+    'Content-Type': 'text/html'
+  });
+  res.write('Hallo FOSSGIS 2015');
+  res.end();
+}).listen(8888);
+                        </code></pre>
+                        <img alt="Simple Node.js Webserver" src="img/simple-server.png" width="854">
+                    </section>
                 </section>
 
                 <section>
