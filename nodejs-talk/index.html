@@ -189,7 +189,7 @@ http.createServer(function (req, res) {
                         </ul>
                         <pre><code data-trim contenteditable>
 >> npm install turf
-                    </code></pre>
+                        </code></pre>
                     </section>
                     <section>
                         <h2>turf.js - Funktionen (Auszug)</h2>
@@ -208,11 +208,38 @@ http.createServer(function (req, res) {
                     <section>
                         <h2>Shapefile.js</h2>
                         <ul>
-                            <li>No order here</li>
-                            <li>Or here</li>
-                            <li>Or here</li>
-                            <li>Or here</li>
+                            <li>Lesen und Schreiben von Shape-Dateien</li>
                         </ul>
+                        <pre><code data-trim contenteditable>
+>> npm install shapefile
+                        </code></pre>
+                        <pre><code data-trim contenteditable>
+// 3rd party deps
+var shapefile = require('shapefile');
+
+// create a shapefile reader
+var reader = shapefile.reader(
+    'data/shapefile/bands.shp',
+    {encoding: 'UTF-8'}
+);
+// read the features
+reader.readHeader(function(error, header) {
+    if (error) throw error;
+    readFeature(reader);
+});
+
+/**
+ * Reads a geojson representation of the shp features
+ */
+function readFeature(reader) {
+    reader.readRecord(function(error, record) {
+        if(record != shapefile.end) {
+            console.log(record);
+            readFeature(reader);
+        }
+    });
+}
+                        </code></pre>
                     </section>
                     <section>
                         <h2>Basement Level 1</h2>
