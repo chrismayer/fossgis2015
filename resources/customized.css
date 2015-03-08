@@ -1,0 +1,216 @@
+section [lang] {
+	font-style: italic;
+}
+
+table.authors-contact td {
+	text-align: center;
+}
+table.authors-contact tr.smaller td {
+	font-size: 75%;
+}
+table.authors-contact td img {
+	margin: 0;
+	width: 3em;
+	height: 3em;
+	max-width: none;
+	max-height: none;
+}
+
+span.ok,
+span.nope,
+span.grin {
+	font-weight: bold;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	text-shadow: 0 0 7px #ccc;
+}
+span.grin {
+	font-weight: normal;
+	color: orange;
+}
+span.ok {
+    color: darkgreen;
+}
+span.nope {
+    color: darkred;
+}
+
+.reveal section .force-natural-case {
+	text-transform: none;
+}
+
+
+.reveal section img.plain {
+    background: none;
+    border-width: 0;
+    box-shadow: none;
+}
+.reveal section h1 img.plain,
+.reveal section h2 img.plain,
+.reveal section h3 img.plain,
+.reveal section h4 img.plain,
+.reveal section h5 img.plain,
+.reveal section h6 img.plain {
+	margin: 0;
+}
+
+
+.pulse2 {
+    -webkit-animation: pulse2 1s linear infinite;
+    -moz-animation: pulse2 1s linear infinite;
+    -ms-animation: pulse2 1s linear infinite;
+    animation: pulse2 1s linear infinite;
+}
+
+@keyframes "pulse2" {
+ 0% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+ }
+ 50% {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+ }
+
+}
+
+@-moz-keyframes pulse2 {
+ 0% {
+   -moz-transform: scale(1.2);
+   transform: scale(1.2);
+ }
+ 50% {
+   -moz-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -moz-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-webkit-keyframes "pulse2" {
+ 0% {
+   -webkit-transform: scale(1.2);
+   transform: scale(1.2);
+ }
+ 50% {
+   -webkit-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -webkit-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+@-ms-keyframes "pulse2" {
+ 0% {
+   -ms-transform: scale(1.2);
+   transform: scale(1.2);
+ }
+ 50% {
+   -ms-transform: scale(0.8);
+   transform: scale(0.8);
+ }
+ 100% {
+   -ms-transform: scale(1);
+   transform: scale(1);
+ }
+
+}
+
+
+.reveal section img.contrast {
+    background-color: #fff;
+    border: 10px solid #fff;
+    box-shadow: 0 0 10px 10px #fff;
+    border-radius: 5px;
+}
+
+.reveal section p.subtle {
+    margin-top: 5em;
+}
+
+.reveal section p.subtle a {
+    font-size: smaller;
+}
+
+.reveal section div.split-info {
+    margin: 5px;
+    clear: both;
+}
+
+.reveal section div.part {
+    margin: 5px;
+    float: left;
+    width: 48.9%;
+}
+
+.reveal section div.part .enumeration {
+    text-align: left;
+}
+
+.reveal section a.twitter,.reveal section a.github {
+	display: inline;
+    padding-left: 1.2em;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    /* background-size: contain; */
+    background-size: 1.0em;
+}
+
+.reveal section a.github {
+    background-image: url("img/github-logo-outline.png");
+}
+
+.reveal section a.twitter {
+    background-image: url("img/twitter-logo-outline.png");
+}
+
+.reveal section .highlight {
+	text-shadow: 0 0 20px orange
+}
+
+.reveal section .unhighlight {
+    opacity: 0.7;
+}
+
+.reveal section .force-lowercase {
+	text-transform:lowercase;
+}
+
+.reveal code.small {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+
+.reveal section #books div {
+	float: left;
+	width: 33%
+}
+.reveal section.author img,
+.reveal section img.sideimage  {
+	float: right;
+	clear: right;
+	width: 25%
+}
+.reveal section.author ul {
+    max-width: 70%;
+}
