@@ -17,7 +17,7 @@ app.get('/data', function(req, res) {
     // form 2015-03-10T10:40:00
     var now = new Date(),
         MS_PER_MINUTE = 60000,
-        reqDate = new Date(now - 10 * MS_PER_MINUTE),
+        reqDate = new Date(now - 15 * MS_PER_MINUTE),
         // format the date
         reqDateString =
         reqDate.getFullYear() + '-0' + (reqDate.getMonth()+1) + '-' + reqDate.getDate() + 'T' +
@@ -65,9 +65,18 @@ app.get('/data', function(req, res) {
                 }
             }
 
-            res.writeHead(200, {'Content-Type': 'application/json'});
-            res.write(JSON.stringify(fcOut));
-            res.end();
+            if(fcOut) {
+                // return the derived changeset features of the API
+                res.writeHead(200, {'Content-Type': 'application/json'});
+                res.write(JSON.stringify(fcOut));
+                res.end();
+            } else {
+                // return an empty feature collection
+                res.writeHead(200, {'Content-Type': 'application/json'});
+                res.write(JSON.stringify(turf.featurecollection()));
+                res.end();
+            }
+
 
         } else {
             res.writeHead(500, {'Content-Type': 'application/json'});
