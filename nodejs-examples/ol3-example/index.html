@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>OpenLayers 3 app</title>
+    <title>OpenLayers 3 with Node.js example</title>
     <link rel="stylesheet" href="libs/ol.css" type="text/css">
     
     <style>
@@ -11,6 +11,11 @@
       .map {
         height: 400px;
         width: 100%;
+      }
+      #lb-background {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
       }
       #ladebalken {
         -webkit-border-radius: 5px;
@@ -27,7 +32,9 @@
     <p>
         Show the OSM changesets of the last 15 seconds
     </p>
-    <span id="ladebalken" style="display: block; background: rgba(0, 60, 136, 0.7); width: 0px;">&nbsp;</span>
+    <div id="lb-background" style="width: 300px; background: grey;">
+        <span id="ladebalken" style="display: block; background: rgba(0, 60, 136, 0.7); width: 0px;">&nbsp;</span>
+    </div>
     <script src="libs/jquery.js"></script>
     <script src="libs/ol.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
