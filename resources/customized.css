@@ -177,11 +177,11 @@ span.nope {
 }
 
 .reveal section a.github {
-    background-image: url("img/github-logo-outline.png");
+    background-image: url("../nodejs-talk/img/github-logo-outline.png");
 }
 
 .reveal section a.twitter {
-    background-image: url("img/twitter-logo-outline.png");
+    background-image: url("../nodejs-talk/img/twitter-logo-outline.png");
 }
 
 .reveal section .highlight {
