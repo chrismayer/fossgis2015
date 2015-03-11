@@ -73,9 +73,10 @@
                         <li>Open Source Enthusiast
                             <ul>
                                 <li>Kernentwickler GeoExt</li>
-                                <li>OpenLayers, GeoTools, ...</li>
+                                <li>OpenLayers, GeoTools, uvm.</li>
                             </ul>
                         </li>
+                        <li>Sprecher bei nat. und internat. Konferenzen (FOSS4G, FOSSGIS, SVG Open)</li>
                         <li>OSGeo Foundation Charter Member</li>
                     </ul>
                     <div style="width: 75%">
@@ -346,8 +347,14 @@ http.createServer(function (req, res) {
                             <li>Aggregation (Sum, Average, Aggregate...)</li>
                             <li>Classification (Nearest, Reclass, ...)</li>
                             <li>Interpolation (TIN, Isolines, Triangle-Grid, ...)</li>
-                            <li>...</li>
+                            <li><a href="http://turfjs.org/static/docs/">uvm</a> ...</li>
                         </ul>
+                        <pre><code data-trim contenteditable>
+// create a geojson point object by turf wrapper ...
+var point1 = turf.point([7.8, 51.8]);
+// ... and buffer it
+var buffered = turf.buffer(point1, 100);
+                        </code></pre>
                     </section>
                 </section>
 
